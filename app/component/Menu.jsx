@@ -5,8 +5,9 @@ import { useState } from "react"
 import { SlMenu } from "react-icons/sl";
 import { TfiClose } from "react-icons/tfi";
 const Menu = () => {
+    const headHeight = '62.72px'
     const [open, setOpen] = useState(false)
-    const links = ['Homepage', 'Shop', 'Deals', 'About', 'contact', 'Logout', 'Cart(1)']
+    const links = ['Home', 'All Collections', 'Contact', `${'login'}`]
     return (
         <div className="">
             {open ? <TfiClose
@@ -19,23 +20,31 @@ const Menu = () => {
                     onClick={() => setOpen(prev => !prev)}
                 />}
 
-            <nav className={"absolute top-[68.5px] bg-white w-full md:w-[399px] h-[calc(100vh-68.5px)] py-[1rem] flex flex-col gap-[.2rem] z-10 text-xl links" + (open ? ' active' : '')}>
+            <nav className={`absolute top-[var(--headHeight)] bg-white w-full 
+            md:w-[399px] h-[calc(100vh-var(--headHeight))] py-[1rem] 
+            flex flex-col gap-[.2rem] z-10 text-xl links` + (open ? ' active' : '')}
+
+                style={{ '--headHeight': headHeight }}>
                 {
                     links.map(e => (
                         <div className="link-hover">
-                            <Link className="flex items-center py-[.5rem] px-[2rem] text-[1.2rem]" href={`/`}>{e}</Link>
+                            <Link className={`flex items-center py-[.5rem] px-[2rem] text-[1.2rem]`} href={`/`}>{e}</Link>
                         </div>
                     ))}
             </nav>
-            {open && (
-                <>
-                    <div
-                        className="hidden md:block absolute bg-black opacity-50 left-0 top-[68.5px] w-full h-[calc(100vh-68.5px)] z-9"
-                        onClick={() => setOpen(false)}
-                    ></div>
-                </>
-            )}
-        </div>
+            {
+                open && (
+                    <>
+                        <div
+                            className={`hidden md:block absolute bg-black opacity-50 
+                                left-0 top-[var(--headHeight)] w-full h-[calc(100vh-var(--headHeight))] z-9`}
+                            style={{ '--headHeight': headHeight }}
+                            onClick={() => setOpen(false)}
+                        ></div>
+                    </>
+                )
+            }
+        </div >
     )
 }
 
