@@ -33,7 +33,7 @@ const Navbar = () => {
             className={`fixed top-0 left-0 w-full bg-white shadow-md 
                 transition-transform duration-300 ${show ? "translate-y-0" : "-translate-y-full"
                 }`}>
-            <div className="relative px-[1.8rem] md:px-[2.2rem] py-[10px]
+            <div className="relative px-[1.875rem] md:px-[2rem] py-[10px] lg:py-[20px]
         flex items-center justify-between gap-8">
                 {/* RIGHT */}
                 <div className="w-1/3">
