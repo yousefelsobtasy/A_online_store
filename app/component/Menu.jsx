@@ -7,7 +7,23 @@ import { TfiClose } from "react-icons/tfi";
 const Menu = () => {
     const headHeight = '68.5px'
     const [open, setOpen] = useState(false)
-    const links = ['Home', 'All Collections', 'Contact']
+    const links = [
+        {
+            id: 1,
+            name: 'Home',
+            href: '/'
+        },
+        {
+            id: 2,
+            name: 'Collections',
+            href: '/collections'
+        },
+        {
+            id: 3,
+            name: 'Contact',
+            href: '/contact'
+        }
+    ]
     return (
         <div>
             {open ? <TfiClose
@@ -25,38 +41,27 @@ const Menu = () => {
             flex flex-col gap-[.2rem] z-10 text-xl links` + (open ? ' active no-scroll' : '')}
                 style={{ '--headHeight': headHeight }}
             >
-                <div className="link-hover">
-                    <Link
-                        className={`flex items-center py-[.5rem] 
+                {
+                    links.map(link => (
+                        <div className="link-hover">
+                            <Link
+                                key={link.id}
+                                className={`flex items-center py-[.5rem] 
                             px-[2rem] text-[1.2rem]`}
-                        href={`/`}
-                        onClick={() => setOpen(false)}
-                    >
-                        Home
-                    </Link>
-                </div>
-                <div className="link-hover">
-                    <Link
-                        className={`flex items-center py-[.5rem] 
-                            px-[2rem] text-[1.2rem]`}
-                        href={`/collections`}
-                        onClick={() => setOpen(false)}
-                    >
-                        All Collections
-                    </Link>
-                </div>
-                <div className="link-hover">
-                    <Link
-                        className={`flex items-center py-[.5rem] 
-                            px-[2rem] text-[1.2rem]`}
-                        href={`/contact`}
-                        onClick={() => setOpen(false)}
-                    >
-                        Contact
-                    </Link>
-                </div>
+                                href={link.href}
+                                onClick={() => setOpen(false)}
+                            >
+                                {link.name}
+                            </Link>
+                        </div>
+                    ))
+                }
                 <div className="link-hover md:hidden">
-                    <Link className={`flex items-center py-[.5rem] px-[2rem] text-[1.2rem]`} href={`/`}>{'Login'}</Link>
+                    <Link
+                        className={`flex items-center py-[.5rem] px-[2rem] text-[1.2rem]`}
+                        href={`/`}>
+                        {'Login'}
+                    </Link>
                 </div>
             </nav>
             {
