@@ -36,9 +36,9 @@ const Menu = () => {
                     onClick={() => setOpen(prev => !prev)}
                 />}
 
-            <nav className={`absolute top-[var(--headHeight)] bg-white w-full 
-            md:w-[399px] h-[calc(100vh-var(--headHeight))] py-[1rem] 
-            flex flex-col gap-[.2rem] z-10 text-xl links` + (open ? ' active no-scroll' : '')}
+            <nav className={`absolute top-[var(--headHeight)]
+            bg-white w-full md:w-[399px] h-[calc(100vh-var(--headHeight))] 
+            py-[1rem] flex flex-col gap-[.2rem] z-10 text-xl links` + (open ? ' active no-scroll' : '')}
                 style={{ '--headHeight': headHeight }}
             >
                 {
@@ -69,8 +69,9 @@ const Menu = () => {
                     <>
                         <div
                             className={`hidden md:block absolute 
-                                left-0 top-[var(--headHeight)] w-full h-[calc(100vh-var(--headHeight))] z-9`}
-                            style={{ '--headHeight': headHeight, backgroundColor: '#12121280' }}
+                                left-0 top-[var(--headHeight)] 
+                                w-full h-[calc(100vh-var(--headHeight))] z-9`}
+                            style={{ backgroundColor: '#12121280' }}
                             onClick={() => setOpen(false)}
                         ></div>
                     </>

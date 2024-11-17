@@ -16,7 +16,7 @@ const NavIcons = () => {
         }
     }, [searchOpen])
     return (<>
-        <div className="w-1/3 flex items-center justify-end gap-4 text-[1.3rem]">
+        <div className="w-1/3 flex items-center justify-end gap-4 text-[1.4rem]">
             <div onClick={() => setSearchOpen(true)} >
                 <SearchBar />
             </div>
