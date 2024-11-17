@@ -25,6 +25,14 @@
 
 /* my framework end */
 
+* {
+    box-sizing: border-box;
+}
+
+body:has(.no-scroll) {
+    overflow: hidden;
+}
+
 svg {
     transition: all 0.1s ease-in-out;
 }
@@ -41,3 +49,25 @@ svg:hover {
 .links.active {
     left: 0;
 }
+
+.searchBar {
+    top: -100%;
+    transition: all 0.2s ease-in-out;
+}
+
+.searchBar.active {
+    top: 0;
+}
+
+#search:focus {
+    outline: 1px solid;
+}
+
+/* Footer Start  */
+
+footer .footerContentTop ul li {
+    padding: 10px 0;
+    font-size: .9rem;
+}
+
+/* Footer End */

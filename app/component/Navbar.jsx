@@ -3,10 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { useEffect, useState } from "react"
 import Menu from "./Menu"
-import { IoSearchOutline } from "react-icons/io5";
-import { IoCartOutline } from "react-icons/io5";
-import { VscAccount } from "react-icons/vsc";
-
+import NavIcons from "./NavIcons"
 const Navbar = () => {
     const [show, setShow] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
@@ -43,16 +40,14 @@ const Navbar = () => {
                 <div className="w-1/3 flex justify-center">
                     <h1 className="flex items-center justify-center">
                         <Link href={`/`} className="p-[7.5px] curser-pointer inline-block text-center">
-                            <Image src="/logo.png" alt="logo" width={90} height={24} />
+                            <Image src="/logo.png" alt="logo" width={90} height={24} loading="eager"
+                                style={{ maxWidth: 'none' }}
+                            />
                         </Link>
                     </h1>
                 </div>
                 {/* LEFT  */}
-                <div className="w-1/3 flex items-center justify-end gap-4 text-[1.5rem]">
-                    <IoSearchOutline className="cursor-pointer" />
-                    <VscAccount className="cursor-pointer hidden md:block" />
-                    <IoCartOutline className="cursor-pointer" />
-                </div>
+                <NavIcons />
             </div>
         </header>
     )
