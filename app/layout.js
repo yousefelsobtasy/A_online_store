@@ -6,6 +6,9 @@ import Footer from "./component/Footer";
 export const metadata = {
   title: "City Threads",
   description: "Next Generation of fashion",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }) {

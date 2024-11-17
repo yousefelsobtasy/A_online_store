@@ -60,6 +60,7 @@ svg:hover {
     left: 0;
 }
 
+/* 
 .searchBar {
     top: -100%;
     transition: all 0.2s ease-in-out;
@@ -71,8 +72,58 @@ svg:hover {
 
 #search:focus {
     outline: 1px solid;
+} */
+
+/* Home Products Start  */
+
+.productImgContainer {
+    position: relative;
+    transition: all .2s ease-in-out;
 }
 
+.productImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 1;
+    transition: all .2s ease-in-out;
+}
+
+.productImgHover {
+    transition: all .2s ease-in-out;
+}
+
+@media (min-width:1024px) {
+    .productImgContainer:hover .productImgHover {
+        transform: translateY(-5px) scale(1.025);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .productImgContainer:hover .productImg {
+        opacity: 0;
+    }
+}
+
+
+
+
+/* .topImg:hover{
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0  ;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image:url('/top-15.jpg');
+    }
+} */
+
+/* Home Products End */
 /* Footer Start  */
 
 footer .footerContentTop ul li {

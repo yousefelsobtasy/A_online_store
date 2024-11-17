@@ -27,7 +27,7 @@ const Navbar = () => {
 
     return (
         <header
-            className={`fixed top-0 left-0 w-full bg-white shadow-md 
+            className={`z-50 fixed top-0 left-0 w-full bg-white shadow-md 
                 transition-transform duration-300 ${show ? "translate-y-0" : "-translate-y-full"
                 }`}>
             <div className="relative px-[1.875rem] md:px-[2rem] py-[10px] lg:py-[20px]
