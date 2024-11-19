@@ -10,12 +10,27 @@ import { TfiClose } from "react-icons/tfi";
 const NavIcons = () => {
     const inputRef = useRef();
     const [searchOpen, setSearchOpen] = useState(false);
+    // const [cart, setCart] = useState(null)
 
     useEffect(() => {
         if (searchOpen) {
             inputRef.current?.focus();
         }
     }, [searchOpen]);
+
+    useEffect(() => {
+        const cart = localStorage.getItem('cart')
+        const cartCount = document.querySelector('#cartCount')
+
+        if (cart && JSON.parse(cart).count) {
+            cartCount.style.display = 'flex'
+            cartCount.textContent = JSON.parse(cart).count
+        } else {
+            cartCount.style.display = 'none'
+        }
+
+    }, [])
+
 
     return (
         <>

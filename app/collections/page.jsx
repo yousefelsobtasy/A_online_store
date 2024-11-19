@@ -4,12 +4,12 @@ import { useEffect, useState } from 'react'
 const Collections = () => {
     const [count, setCount] = useState(0)
 
-    useEffect(() => {
-        const cart = localStorage.getItem('cart')
-        if (cart) {
-            setCount(_ => JSON.parse(cart).count)
-        }
-    }, [])
+    // useEffect(() => {
+    //     const cart = localStorage.getItem('cart')
+    //     if (cart) {
+    //         setCount(JSON.parse(cart).count)
+    //     }
+    // }, [])
 
     useEffect(() => {
         localStorage.setItem('cart', JSON.stringify({ count }))
