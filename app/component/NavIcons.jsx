@@ -45,9 +45,9 @@ const NavIcons = () => {
                             id="cartCount"
                             className={`absolute top-[-.2rem] right-[-.2rem] w-[1rem] h-[1rem] p-[.2rem] text-[.8rem]
                                 bg-red-500 text-white rounded-full flex justify-center items-center`}
+                            style={{ display: 'none' }}
                             aria-live="polite"
                         >
-                            0
                         </div>
                     </button>
                 </Link>

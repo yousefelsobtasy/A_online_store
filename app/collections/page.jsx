@@ -7,7 +7,7 @@ const Collections = () => {
     useEffect(() => {
         const cart = localStorage.getItem('cart')
         if (cart) {
-            setCount(JSON.parse(cart).count)
+            setCount(_ => JSON.parse(cart).count)
         }
     }, [])
 
@@ -21,6 +21,7 @@ const Collections = () => {
             cartCount.style.display = 'none'
         }
     }, [count])
+
     return (
         <>
             <div>Collections</div>
