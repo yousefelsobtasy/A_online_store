@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const Landing = () => {
     return (<>
-        <div className="w-full">
+        <div className="w-full relative">
             <Image src="/landing.png" alt="landing" width={500} height={500} layout="responsive" />
         </div>
         <div className="w-full py-[40px] px-[15px] lg:px-[50px] max-w-[1200px] mx-auto">

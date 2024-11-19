@@ -56,13 +56,13 @@ const Menu = () => {
                         </div>
                     ))
                 }
-                {/* <div className="link-hover md:hidden">
+                <div className="link-hover md:hidden">
                     <Link
                         className={`flex items-center py-[.5rem] px-[2rem] text-[1.2rem]`}
                         href={`/`}>
                         {'Login'}
                     </Link>
-                </div> */}
+                </div>
             </nav>
             {
                 open && (
