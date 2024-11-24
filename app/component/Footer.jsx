@@ -10,9 +10,9 @@ const Footer = () => {
                     <li>
                         <Link href="/">Home</Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link href="/collections">All Collections</Link>
-                    </li>
+                    </li> */}
                     <li>
                         <Link href="/contact">Contact</Link>
                     </li>

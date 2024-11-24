@@ -19,15 +19,19 @@ const NavIcons = () => {
     }, [searchOpen]);
 
     useEffect(() => {
-        const cart = localStorage.getItem('cart')
-        const cartCount = document.querySelector('#cartCount')
+        const cartItems = Object.keys(localStorage)
+        const productSum = cartItems
+            .map(e => localStorage.getItem(e))
+            .reduce((a, item) => parseInt(a) + parseInt(item), 0)
 
-        if (cart && JSON.parse(cart).count) {
+        const cartCount = document.querySelector('#cartCount')
+        if (productSum > 0) {
             cartCount.style.display = 'flex'
-            cartCount.textContent = JSON.parse(cart).count
+            cartCount.textContent = productSum
         } else {
             cartCount.style.display = 'none'
         }
+
 
     }, [])
 
@@ -35,7 +39,7 @@ const NavIcons = () => {
     return (
         <>
             <div className="w-1/3 flex items-center justify-end gap-4 text-[1.7rem]">
-                <button
+                {/* <button
                     className="flex items-center cursor-pointer"
                     onClick={() => setSearchOpen(true)}
                     aria-label="Open search bar"
@@ -49,7 +53,7 @@ const NavIcons = () => {
                     >
                         <VscAccount />
                     </button>
-                </Link>
+                </Link> */}
                 <Link href="/cart">
                     <button
                         className="cursor-pointer flex items-center relative"

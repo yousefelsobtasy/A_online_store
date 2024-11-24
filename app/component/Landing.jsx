@@ -11,8 +11,8 @@ const Landing = () => {
             <div className="grid grid-cols-2 grid-rows-1 gap-2">
                 <div className="col-span-1 row-span-1 px-1">
                     <Link className="productImgContainer" href={'/SweetPants'}>
-                        <Image className="productImg" src={'/pant-9.jpg'} alt="SweetPants" width={500} height={500} layout="responsive" />
-                        <Image className="productImgHover" src={'/pant-2.jpg'} alt="SweetPants" width={500} height={500} layout="responsive" />
+                        <Image className="productImg" src={'/pant-5.jpg'} alt="SweetPants" width={500} height={500} layout="responsive" />
+                        <Image className="productImgHover" src={'/pant-1.jpg'} alt="SweetPants" width={500} height={500} layout="responsive" />
                     </Link>
                     <div className={`flex flex-col justify-between gap-3 my-[20px]`}>
                         <p className="text-xs">Cream SweetPants</p>
@@ -26,8 +26,8 @@ const Landing = () => {
                 </div>
                 <div className="col-span-1 row-span-1 px-1">
                     <Link className="productImgContainer" href={'/T-shirt'}>
-                        <Image className="productImg" src={'/top-11.jpg'} alt="T-shirt" width={500} height={500} layout="responsive" />
-                        <Image className="productImgHover" src={'/top-15.jpg'} alt="T-shirt" width={500} height={500} layout="responsive" />
+                        <Image className="productImg" src={'/top-1.jpg'} alt="T-shirt" width={500} height={500} layout="responsive" />
+                        <Image className="productImgHover" src={'/top-2.jpg'} alt="T-shirt" width={500} height={500} layout="responsive" />
                     </Link>
                     <div className={`flex flex-col justify-between gap-3 my-[20px]`}>
                         <p className="text-xs">Long Sleeve T-shirt</p>
