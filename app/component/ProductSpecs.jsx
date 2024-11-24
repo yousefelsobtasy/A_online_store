@@ -12,7 +12,7 @@ const ProductSpecs = ({ product }) => {
 
     function makeOrder(specs) {
         const date = new Date().toLocaleString()
-        localStorage.setItem(`${product.name} - ${specs.size} - ${date}`, JSON.stringify(specs.count))
+        localStorage.setItem(`${product.name} - ${specs.size} - ${product.price} - ${date}`, JSON.stringify(specs.count))
 
         const cartItems = Object.keys(localStorage)
         const productSum = cartItems

@@ -7,12 +7,12 @@ export default function SinglePage({ params }) {
 
     const product = params.slug === 'T-shirt' ? {
         name: 'Long Sleeve T-shirt',
-        price: 'L.E 650.00 EGP',
+        price: 650,
         type: 'top',
         count: 8
     } : params.slug === 'SweetPants' ? {
         name: 'Cream SweetPants',
-        price: 'L.E 790.00 EGP',
+        price: 790.00,
         type: 'pant',
         count: 6
     } : 'Error';
