@@ -90,10 +90,10 @@ const CheckOut = () => {
 
         emailjs
             .send(
-                'service_r4ina0h',
-                'template_z46b7y1', // Replace with your EmailJS template ID
+                'service_n5gkyce',
+                'template_z4zfhb9', // Replace with your EmailJS template ID
                 templateParams,
-                't5nEgCzBU4CpX3is5' // Replace with your EmailJS public key
+                'J8k4fpnhHH0oX1QQP' // Replace with your EmailJS public key
             )
             .then(
                 (response) => {

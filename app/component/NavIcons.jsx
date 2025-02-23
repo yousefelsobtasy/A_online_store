@@ -39,7 +39,7 @@ const NavIcons = () => {
     return (
         <>
             <div className="w-1/3 flex items-center justify-end gap-4 text-[1.7rem]">
-                {/* <button
+                <button
                     className="flex items-center cursor-pointer"
                     onClick={() => setSearchOpen(true)}
                     aria-label="Open search bar"
@@ -53,7 +53,7 @@ const NavIcons = () => {
                     >
                         <VscAccount />
                     </button>
-                </Link> */}
+                </Link>
                 <Link href="/cart">
                     <button
                         className="cursor-pointer flex items-center relative"
